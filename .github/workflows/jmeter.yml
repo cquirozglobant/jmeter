@@ -9,6 +9,6 @@ jobs:
       - name: Setup Curl
         run: sudo apt install curl
       - name: Temp
-        run: mkdir -p /tmpjmeter/
+        run: sudo mkdir -p /tmp/jmeter/
       - name: Download JMeter
         run: curl -L --silent https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz > /tmp/jmeter/apache-jmeter-5.5.tgz
