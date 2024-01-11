@@ -11,4 +11,10 @@ jobs:
       - name: Temp
         run: sudo mkdir -p /tmp/jmeter/
       - name: Download JMeter
-        run: curl -L --silent https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz > /tmp/jmeter/apache-jmeter-5.5.tgz
+        run: sudo curl -L --silent https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz > /tmp/jmeter/apache-jmeter-5.5.tgz
+      - name: JMeter Folder
+        run: sudo mkdir -p /home/jmeter/
+      - name: Setup tzdata
+        run: sudo apt install tzdata
+      - name: JMeter tar
+        run: sudo tar -xzf /tmp/jmeter/apache-jmeter-5.5.tgz -C /home/jmeter/
