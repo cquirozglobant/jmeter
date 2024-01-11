@@ -12,13 +12,13 @@ jobs:
         run: sudo mkdir -p /tmp/jmeter/
       - name: Download JMeter
         run: sudo curl -O https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz 
-      - name: pwd
-        run: sudo pwd
       - name: JMeter Folder
         run: sudo mkdir -p /home/jmeter/
       - name: Setup tzdata
         run: sudo apt-get install tzdata
       - name: JMeter tar
         run: sudo tar -xzf /home/runner/work/jmeter/jmeter/apache-jmeter-5.5.tgz -C /home/jmeter/
+      - name: pwd
+        run: sudo pwd
       - name: Run JMeter
         run: sh /home/jmeter/bin/jmeter.sh -n -t
