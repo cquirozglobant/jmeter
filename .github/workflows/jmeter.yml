@@ -20,3 +20,5 @@ jobs:
         run: sudo apt-get install tzdata
       - name: JMeter tar
         run: sudo tar -xzf /home/runner/work/jmeter/jmeter/apache-jmeter-5.5.tgz -C /home/jmeter/
+      - name: Run JMeter
+        run: sh /home/jmeter/bin/jmeter.sh -n -t
