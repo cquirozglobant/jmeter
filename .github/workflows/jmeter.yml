@@ -21,4 +21,4 @@ jobs:
       - name: pwd
         run: sudo pwd
       - name: Run JMeter
-        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t
+        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n 
