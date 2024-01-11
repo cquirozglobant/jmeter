@@ -19,6 +19,6 @@ jobs:
       - name: JMeter tar
         run: sudo tar -xzf /home/runner/work/jmeter/jmeter/apache-jmeter-5.5.tgz
       - name: pwd
-        run: sudo ls
+        run: sudo pwd
       - name: Run JMeter
-        run: sh /home/runner/work/jmeter/jmeter/bin/jmeter.sh -n -t
+        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t
