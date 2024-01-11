@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Curl
-        run: apk add curl
+        run: apt install curl
       - name: Temp
         run: mkdir -p /tmpjmeter/
       - name: Download JMeter
