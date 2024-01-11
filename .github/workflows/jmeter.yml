@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Curl
-        run: sudo apt install curl
+        run: sudo apt-get install curl
       - name: Temp
         run: sudo mkdir -p /tmp/jmeter/
       - name: Download JMeter
@@ -15,6 +15,6 @@ jobs:
       - name: JMeter Folder
         run: sudo mkdir -p /home/jmeter/
       - name: Setup tzdata
-        run: sudo apt install tzdata
+        run: sudo apt-get install tzdata
       - name: JMeter tar
         run: sudo tar -xzf /tmp/jmeter/apache-jmeter-5.5.tgz -C /home/jmeter/
