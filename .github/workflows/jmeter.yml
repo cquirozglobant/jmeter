@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Jmeter
-        uses: tush-tr/setup-jmeter@v1.1.0
+        run: echo Hola Mundo!!!
