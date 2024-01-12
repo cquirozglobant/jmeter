@@ -13,6 +13,8 @@ jobs:
         run: sudo pwd
       - name: Setup Curl
         run: sudo apt-get install curl
+      - name: Setup UnZip
+        run: sudo apt-get install unzip
       - name: Temp
         run: sudo mkdir -p /tmp/jmeter/
       - name: Download JMeter
@@ -23,5 +25,9 @@ jobs:
         run: sudo apt-get install tzdata
       - name: JMeter tar
         run: sudo tar -xzf /home/runner/work/jmeter/jmeter/apache-jmeter-5.5.tgz
+      - name: Download Plugin JMeter
+        run: wget -O /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip https://jmeter-plugins.org/files/packages/jpgc-casutg-2.10.zip
+      - name: Unzip Plugin
+        run: unzip -o /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip -d /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/
       - name: Run JMeter
         run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx
