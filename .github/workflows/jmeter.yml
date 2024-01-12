@@ -28,6 +28,6 @@ jobs:
       - name: Download Plugin JMeter
         run: wget -O /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip https://jmeter-plugins.org/files/packages/jpgc-casutg-2.10.zip
       - name: Unzip Plugin
-        run: unzip -o /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip -d /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/
+        run: sudo unzip -o /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip -d /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/
       - name: Run JMeter
         run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx
