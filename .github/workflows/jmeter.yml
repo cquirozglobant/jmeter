@@ -24,4 +24,4 @@ jobs:
       - name: JMeter tar
         run: sudo tar -xzf /home/runner/work/jmeter/jmeter/apache-jmeter-5.5.tgz
       - name: Run JMeter
-        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n 
+        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx
