@@ -30,4 +30,6 @@ jobs:
       - name: Unzip Plugin
         run: sudo unzip -o /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip -d /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/
       - name: Run JMeter
-        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx
+        run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx 
+             -JTargetConcurrency=${{ secrets.TARGETCONCURRENCY }} -JRampUpTime=${{ secrets.RAMPUPTIME }} -JRampStepsCount=${{ secrets.RAMPUPSTEPSCOUNT }}
+             -JTargetRateTime=${{ secrets.TARGETRATETIME }} -JThinkTime=${{ secrets.THINKTIME }}
