@@ -19,6 +19,10 @@ on:
           type: string
           description: Target Rate Time
           required: true
+        think_time:
+          type: string
+          description: Think Time
+          required: true
     
 jobs:
   test-action:
@@ -48,5 +52,5 @@ jobs:
         run: sudo unzip -o /home/runner/work/jmeter/jmeter/jpgc-casutg-2.10.zip -d /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/
       - name: Run JMeter
         run: sh /home/runner/work/jmeter/jmeter/apache-jmeter-5.5/bin/jmeter.sh -n -t /home/runner/work/jmeter/jmeter/pokeapi.jmx 
-             -JTargetConcurrency=${{ secrets.TARGETCONCURRENCY }} -JRampUpTime=${{ secrets.RAMPUPTIME }} -JRampStepsCount=${{ secrets.RAMPUPSTEPSCOUNT }}
-             -JTargetRateTime=${{ secrets.TARGETRATETIME }} -JThinkTime=${{ secrets.THINKTIME }}
+             -JTargetConcurrency=${{ inputs.target_concurrency }} -JRampUpTime=${{ inputs.ramp_up_time }} -JRampStepsCount=${{ inputs.ramp_steps_count }}
+             -JTargetRateTime=${{ inputs.target_rate_time }} -JThinkTime=${{ inputs.think_time }}
